@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IkiReader</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="397299217655-3hfub8ge35f85jvdr80kh8b0gklv4ut9.apps.googleusercontent.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js"></script>
+    <link rel="stylesheet" href="hi/read.css">
+  </head>
+  <body>
+    <div id="header">
+        <div class="hid">
+            <a id="info" href="index.html"></a>
+            <div id="auth"></div>
+        </div>
+    </div>
+    <div class="darkness">
+        <div id="list"></div>
+    </div>
+    <div class="comments">
+        <div class="hid">
+            <div class="comments-header">
+                <!--
+                    Настройки
+                -->
+            </div>
+            <div class="comments-form">
+                <div class="comments-form-text">
+                    Написать комментарий...
+                </div>
+            </div>
+            <div class="comments-list">
+
+            </div>
+            <button class="btn load_comments allComments" hidden="true">
+                Показать ещё комментарии
+            </button>
+        </div>
+    </div>
+    <script src="hi/read.js"></script>
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+    <script async defer src="https://apis.google.com/js/api.js"onload="this.onload=function(){};handleClientLoad()"onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
+  </body>
+</html>

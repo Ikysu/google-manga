@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IkiReader</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="397299217655-3hfub8ge35f85jvdr80kh8b0gklv4ut9.apps.googleusercontent.com">
+    <style>
+        body {
+            margin:0;
+            font-size: 17px;
+            color: #c8c8c8;
+            background: #222;
+            font-family: 'Share Tech Mono', Monospace, Courier;
+        }
+        img {
+            display:block;
+            margin-left:auto;
+            margin-right:auto;
+            width:100%;
+            max-width: 800px;
+        }
+        div {
+            display: block;
+        }
+        #header {
+            margin: auto;
+            width: 100%;
+            margin-bottom: 5px;
+            border-bottom: dotted 1px #444;
+        }
+        .hid {
+            margin: auto;
+            max-width: 777px;
+            padding: 15px;
+            padding-bottom: 45px;
+        }
+        .logo {
+            float:left;
+        }
+        .logo i {
+            font-size: 30px;
+            
+        }
+        
+        .currector {
+            width: 10px;height: 10px;background-color: red;
+        }
+        .pages {
+            margin: auto;
+            margin-top: 5px;
+        }
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+        a:hover {
+            text-decoration: none;
+        }
+        .sp {
+            margin: 0 5px;
+        }
+        
+
+        #page {
+            margin: auto;
+            max-width: 777px;
+        }
+
+        #content {
+            margin: 10px;
+        }
+
+        span {
+            margin: 0 10px 0 0;
+        }
+
+        .tag {
+            color: #c8c8c8;
+        }
+
+        .im {
+            margin-left: -18px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        #bott {
+            text-align: center;
+            padding-bottom: 20px;
+            padding-top: 20px;
+            margin-top: 45px;
+            border-top: dotted 1px #444;
+        }
+
+        #getLink {
+            width: 60%;
+        }
+
+    </style>
+    <script>
+        if(window.location.hash){
+            window.location.href="read.html"+window.location.hash
+        }
+
+        function clck(event) {
+            if (event.keyCode == 13) {
+                var p1 = document.getElementById("getLink")
+                var p2 = p1.value.split("?")[0].split("#")
+                var p3 = p2[p2.length-1].split("/")
+                window.location.href="read.html#"+p3[p3.length-1]
+            }
+        }
+    </script>
+  </head>
+  <body>
+    <div id="header">
+        <div class="hid">
+            <a id="info" class="pages" style="text-align: left;float:left;" href="/">IkiReader</a>
+        </div>
+    </div>
+
+    <div id="page">
+        <div id="content">
+            <h2>What for?</h2>
+            <p>For viewing photos vertically. </p>
+            <br>
+            <h2>For whom?</h2>
+            <p>This project is for manga readers and translators. It is enough for the translator to create an open folder on google drive and copy the link, then paste it into the field below and get a link to the reader. And readers just need to follow the link created by the translator.</p>
+            <input id="getLink" type="url" placeholder="Copy link here" onkeypress="clck(event)">
+            <br><br>
+            <h2>Safely?</h2>
+            <p>Yes, you can look at the open source code in your browser. Also, this site does not have a backend, requests are sent directly from your browser to Google servers.</p>
+            <br>
+            <p>If you find a bug, please let me know by email: <a href="mailto:admin@iky.su">admin@iky.su</a></p>
+        </div>
+    </div>
+    <div id="bott"><a href="https://manga.iky.su/privacy.html">Privacy Policy</a></div>
+  </body>
+</html>
